@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+void apresenta(float a, float b)
+{
+    if (a > b + 7 || a > b*4/3)
+    {
+        cout << "Apenas o 2o aluno apresentara o trabalho";
+    }
+    else
+    {
+       if (b > a + 7 || b > a*4/3)
+       {
+           cout << "Apenas o 1o aluno apresentara o trabalho";
+       }
+       else
+       {
+           cout << "Ambos apresentarao o trabalho";
+       }
+    }
+    return;
+}
+
+int main()
+{
+    int a = 0;
+    float a1, a2;
+    while (a < 10)
+    {
+        cin >> a1 >> a2;
+        apresenta(a1, a2);
+        cout << endl;
+        a++;
+    }
+    return 0;
+}
