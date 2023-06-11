@@ -1,0 +1,38 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+float salary(float n, float h)
+{ 
+    float s;
+    if(n==1 || n == 2 || n == 3)
+    {
+        if(n == 1)
+        {
+            s = 12*h;
+        }
+        if ( n == 2)
+        {
+            s = 17*h;
+        }
+        if( n == 3 )
+        { 
+            s = 25*h;
+        }
+    }    
+    else
+    {
+        s = 0*h;
+    }
+    return s;
+}
+
+int main()
+{
+    float n;
+    float h;
+    cin >> n >> h;
+    cout << fixed << setprecision(2) << "R$" << salary(n,h);
+
+    return 0;
+}
