@@ -1,0 +1,56 @@
+#include <iostream>
+#include <iomanip>
+#define tam 1000
+
+using namespace std;
+
+void notavet()
+{
+    int i, c = 0, q = 0, k = 0, n = 0, m = 0;
+    float vet[tam];
+
+     for ( i = 0; i < tam; i++)
+     {
+         cin >> vet [i];
+         if (vet [i] < 0 || vet [i] > 100)
+         {
+              break;
+         }
+         if (vet [i] >= 0 && vet [i] <= 25)
+         {
+             q++;
+         }
+         else
+         {
+             if ( vet [i] > 25 && vet [i] <= 50)
+             {
+                 k++;
+             }
+             else
+             {
+                 if ( vet [i] > 50 && vet [i]  <= 75)
+                 {
+                     n++;
+                 }
+                 else
+                 {
+                     m++;
+                 }
+             }
+         }
+         c++;
+     }
+     
+     cout << fixed << setprecision(2);
+     cout << "Avaliações péssimas: "<< (float) q/c*100 <<"%" << endl;
+     cout << "Avaliações ruins: "<< (float) k/c*100 <<"%" << endl;
+     cout << "Avaliações boas: "<< (float) n/c*100 <<"%" << endl;
+     cout << "Avaliações ótimas: "<< (float) m/c*100 <<"%" << endl;
+     
+}
+
+int main()
+{
+   notavet();
+   return 0;
+}
