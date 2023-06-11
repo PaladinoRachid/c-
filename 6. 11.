@@ -1,0 +1,35 @@
+#include <iostream>
+#define SIZE 10
+
+using namespace std;
+
+int main()
+{
+    int vetor[SIZE];
+    int i, j;
+    
+    for (i = 0; i < SIZE; i++)
+    {
+        cin >> vetor [i];
+    }
+    
+    for (i = 0; i < SIZE; i++)
+    {
+        for ( j = 0; j <SIZE; j++)
+        {
+            if (i != j)
+            {
+                if (vetor [i] == vetor [j])
+                {
+                    if (i < j)
+                    {
+                        cout << i <<" e "<< j << endl;
+                    }
+                }
+            }
+        }
+    }
+
+
+    return 0;
+}
