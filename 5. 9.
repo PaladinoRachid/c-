@@ -1,0 +1,49 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int analisa()
+{
+    float x, s = 0;
+    int c = 0, q = 0, k = 0;
+    
+    do
+    {
+        cin>> x;
+        
+        s = s + x;
+        
+        if (x > 0)
+        {
+        c++;
+        }
+        
+        if (x < 0)
+        {
+        q++;
+        }
+        
+        if (x != 0)
+        {
+        k++;
+        }
+        
+    }while (x != 0);
+    
+    cout<< fixed;
+    cout << "Media dos valores lidos: "<< setprecision(2) <<  s/k<< endl;
+    cout << "Quantidade de valores positivos: "<< c << endl;
+    cout << "Quantidade de valores negativos: "<< q<< endl;
+    cout << "Percentual de valores positivos: "<< c*100/k << "%"<< endl;
+    cout << "Percentual de valores negativos: "<< q*100/k << "%"<< endl;
+    
+    return k;
+}
+int main()
+{
+    int k;
+    k = analisa();
+    cout << "Quantidade de valores lidos: "<< k << endl;
+    return 0;
+}
