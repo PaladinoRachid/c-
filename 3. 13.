@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int valide(int a, int b, int c, int d)
+{
+    int k;
+    if (b > c && d > a && (c+d) > (a+b) && c>0 && d>0 && a%2 == 0)
+    {
+        k = 0;
+    }
+    else
+    {
+        k = 1;
+    }
+    return k;
+}    
+int main()
+{
+    int a, b, c, d, k;
+    cin >> a >> b >> c >> d;
+    k = valide (a,b,c,d);
+    if (k == 0)
+    {
+        cout << "Valores aceitos";
+    }
+    else
+    {
+        cout << "Valores nao aceitos";
+    }
+    return 0;
+}
