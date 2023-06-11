@@ -1,0 +1,41 @@
+#include <iostream>
+#include <iomanip>
+#define N 8
+
+using namespace std;
+
+float faturamento (int quan[], float valor[])
+{
+    float s = 0;
+    int i;
+    
+    for (i = 0; i < N; i ++)
+    {
+        s = s + quan[i]*valor[i];
+    }
+    return s;
+}
+
+int main()
+{
+    float s;
+    int i;
+    int quan[N];
+    float valor[N];
+    
+    for ( i = 0; i < N; i++)
+    {
+        cin>> quan[i];
+    }
+    for ( i = 0; i < N; i++)
+    {
+        cin>> valor[i];
+    }
+    
+    s = faturamento(quan, valor);
+    
+    cout << fixed << setprecision(2);
+    cout << "R$ "<< s;
+    return 0;
+
+}
