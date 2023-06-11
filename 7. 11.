@@ -1,0 +1,67 @@
+#include <iostream>
+#define TAM 1001
+
+using namespace std;
+
+void tautograma( char vetor[])
+{
+    char resultado = 'Y';
+    char aux;
+    int k = 0;
+    int i;
+    
+    
+       if ( vetor[0] != ' ')
+       {
+           aux = vetor[0];
+           k = 1;
+       }
+       
+       for(i=1; vetor[i] != '\0'; i++)
+       {
+           if (vetor [i] != ' ' && vetor[ i - 1] == ' ' )
+           {
+               if ( k == 1)
+               {
+                   if( aux <= 'Z' && aux >= 'A')
+                   {
+                       if(vetor[i]!= aux && vetor [i] != aux - 'A' + 'a' )
+                       {
+                       resultado = 'N';
+                       }
+                   }   
+                   else
+                   {
+                       if(vetor[i]!= aux && vetor [i] != aux - 'a' + 'A' )
+                       {
+                           resultado = 'N';
+                       }
+                   }
+               }  
+               else
+               {
+                   aux = vetor[i];
+                   k = 1;
+               }
+           }
+       
+       }
+   
+   cout << resultado << endl;
+   
+ }
+ 
+
+int main()
+{
+    char vetor[TAM];
+   
+    cin.getline(vetor, TAM);
+    
+     while(vetor[0] != '*')
+     {
+         tautograma(vetor);
+         cin.getline(vetor, TAM);
+     }
+   
+}
