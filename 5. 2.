@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int mediaf ( int n1, int n2) // n1 = 3  e n2 =  1
+{
+    int s = 0;
+    if ( n2 >= n1) 
+    {
+    do 
+    {
+        s = s + n2;
+        n2--; 
+        
+    }
+    while (n2 >= n1);
+    }
+    else
+    {
+    do
+    {               
+        s = s + n1;
+        n1--; 
+
+    }
+    while (n1 >= n2); // 2 >= 1 v
+    }
+    return s;
+}
+int main()
+{
+    int n1, n2;
+    cin >> n1 >> n2;
+    cout<< "Soma do intervalo: ";
+    cout << mediaf(n1, n2);
+    
+
+    return 0;
+}
