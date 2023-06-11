@@ -1,0 +1,46 @@
+#include <iostream>
+#define TAM 50
+
+using namespace std;
+
+void agir ( char str[], int c)
+{
+    int i;
+    for (i = 0; str[i]!= '\0'; i++)
+    {
+        if (str[i] + c <= 'Z' && str[i] + c >= 'A')
+        {
+            str[i]=(int)str[i]+c;
+        }
+        else
+        {
+            str[i] =  str[i] - 'Z' + 'A' + c - 1 ;
+
+        }
+    }
+}
+int main()
+{
+    int k, c;
+    int i;
+    char string[TAM+1];
+    
+    cin>> k;
+    cin.ignore();
+    
+    for ( i = 1; i <= k; i++)
+    {
+    
+    cin.getline(string,TAM);
+    
+    cin>> c;
+    cin.ignore();
+    
+    agir(string, c);
+    
+    cout<<string << endl;
+    
+    }
+
+    return 0;
+}
