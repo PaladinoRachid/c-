@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+void impar(int a)
+{ 
+    if ( a%2 == 0)
+    {
+        cout << "par";
+    }
+    else
+    {
+        cout << "impar";
+    }
+    return;
+}
+
+int main()
+{
+    int a;
+    cin >> a;
+    impar(a);
+    return 0;
+}
