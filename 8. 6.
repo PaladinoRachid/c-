@@ -1,0 +1,36 @@
+#include <iostream>
+#include <iomanip>
+#define LIN 4
+#define COL 2
+
+using namespace std;
+
+int main()
+{
+    
+    float mat[LIN][COL];
+    int i, j;
+    
+    cout << fixed << setprecision (1);
+    
+    for (i = 0; i < LIN; i++)
+    {
+        for ( j = 0; j < COL; j++)
+        {
+            cin >> mat[i][j];
+        }
+    }
+    
+    for (i = 0; i < LIN; i++)
+    {
+        
+        for ( j = 0; j < COL; j++)
+        {
+            cout <<  mat[i][j] << " ";
+        }
+        cout << endl;
+    }
+    
+
+    return 0;
+}
