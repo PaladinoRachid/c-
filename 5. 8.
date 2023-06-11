@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    double x, k, s, p;
+    cin>> x;
+    k = 50;
+    s = 0;
+    for (p = 1; p <= 25; p++)
+    {
+        
+        s = s + pow(x, p)/ k;
+        k-=2;
+    }
+    
+    cout << fixed << setprecision (2);
+    cout << "S = "<< s;
+    
+
+    return 0;
+}
