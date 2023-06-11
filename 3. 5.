@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+void classificaNadador (int t)
+{
+    if(t < 5)
+    {
+        cout << "Nao ha categoria para a idade informada!";
+    }
+    if ( 5 <= t && t <= 7)
+    {
+        cout << "Categoria: infantil A";
+    }
+    if ( 8 <= t && t <= 10)
+    {
+        cout << "Categoria: infantil B";
+    }
+    if (11 <= t && t <= 13)
+    {
+        cout << "Categoria: juvenil A";
+    }
+    if (14 <= t && t <= 17)
+    {
+        cout << "Categoria: juvenil B";
+    }
+    if (18 <= t && t <= 30)
+    {
+        cout << "Categoria: adulto";
+    }
+    if (t > 30)
+    {
+        cout << "Categoria: senior";
+    }    
+    return;
+}
+
+int main()
+{
+    int a;
+    cin >>a;
+     classificaNadador (a);
+    
+    return 0;
+}
