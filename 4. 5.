@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+float notam(float a, float b)
+{
+    float m;
+    m = (a+b)/2;
+    return m;
+}
+
+int main()
+{
+    float a, b;
+    cin >> a >> b;
+    while ((a < 0 || a > 10))
+    {
+        cout << "Nota invalida" << endl;
+        cin >> a;
+    }
+    while ((b< 0 || b > 10))
+    {
+        cout << "Nota invalida" << endl;
+        cin >> b;
+    }
+    cout << fixed << setprecision (2);
+    cout << notam(a,b);
+    return 0;
+}
