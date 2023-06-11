@@ -1,0 +1,39 @@
+#include <iostream>
+#define TAM 10
+using namespace std;
+
+void maiormatriz( int A[TAM][TAM])
+{
+    int i, j, k = 0, q = 0;
+    int maior;
+    maior = A[0][0];
+    
+    for(i = 0; i < TAM; i++)
+    {
+        for ( j = 0; j< TAM; j++)
+        {
+            if(A[i][j] > maior)
+            {
+                maior = A[i][j];
+                q = i; k = j;
+            }
+        }
+    }
+    cout << q << " "<< k;
+}
+
+int main()
+{
+    int i, j;
+    int A[TAM][TAM];
+    
+    for(i= 0; i < TAM; i++)
+    {
+        for ( j = 0; j< TAM; j++)
+        {
+            cin >> A[i][j];
+        }
+    }
+    maiormatriz(A);
+    return 0;
+}
