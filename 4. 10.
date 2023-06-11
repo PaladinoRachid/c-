@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+void imprime ( int n1, int n2)
+{
+    int c;
+if ( n1 < n2)
+{
+    c = n1;
+    while ( c <= n2)
+    {
+        if ( c%11 == 5)
+        {
+        cout << c << endl;
+        }
+        c++;
+    }
+}
+else 
+{
+    c = n2;
+    while ( c <= n1)
+    {
+        if ( c%11 == 5)
+        {
+        cout << c << endl;
+        }
+        c++;
+    }
+} return;
+}
+
+int main()
+{
+    int n1, n2;
+    cin>> n1 >> n2;
+    imprime(n1,n2);
+    return 0;
+}
