@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+void notas(int v)
+{
+   //Variáveis
+   int v1,v2,v3,v4,v5,v6;
+   
+   //Operações
+   v1 = v%100;
+   v2 = v1%50;
+   v3 = v2%20;
+   v4 = v3%10;
+   v5 = v4%5;
+   v6 = v5%2;
+   
+   //Saída
+   cout << v << endl;
+   cout << v/100 << " nota(s) de R$ 100,00" << endl;
+   cout << v1/50 << " nota(s) de R$ 50,00" << endl ;
+   cout << v2/20 << " nota(s) de R$ 20,00" << endl;
+   cout << v3/10 << " nota(s) de R$ 10,00" << endl;
+   cout << v4/5  << " nota(s) de R$ 5,00" << endl;
+   cout << v5/2  << " nota(s) de R$ 2,00" << endl;
+   cout << v6/1  << " nota(s) de R$ 1,00" << endl;
+   return;
+}   
+
+ 
+
+int main()
+{ 
+   int v;
+   cin >> v;
+   notas(v);
+   return 0;
+}
