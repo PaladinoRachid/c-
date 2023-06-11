@@ -1,0 +1,39 @@
+#include <iostream>
+#include <cstring>
+#define TAM 500
+
+using namespace std;
+
+int seis(char string[], char ch)
+{
+    int n, i, indice = -1;
+    n = strlen(string);
+    
+    for (i = n-1; i >= 0; i --)
+    {
+        if(string[i]== ch)
+        {
+            indice = i;
+            break;
+        }
+    }
+    
+    return indice;
+}
+
+int main()
+{
+    int pos;
+    char ch;
+    char string [TAM];
+    
+    cin.getline(string, TAM -1);
+    
+    cin >> ch;
+    
+    pos = seis(string,ch);
+    
+    cout << pos;
+
+    return 0;
+}
