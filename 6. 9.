@@ -1,0 +1,37 @@
+#include <iostream>
+#define ta 10
+
+using namespace std;
+
+void verificavetor ( int pareador[])
+{
+    int i;
+    
+    for ( i = 0; i < ta; i++)
+    {
+        if( pareador[i] <= 0 )
+        {
+            pareador[i] = 1;
+        }
+    }
+}
+
+int main()
+{
+    int pareador[ta];
+    int i;
+    
+    for ( i = 0; i < ta; i++)
+    {
+        cin >> pareador [i];
+    }
+    
+    verificavetor(pareador);
+    
+    for (i = 0; i < ta; i++)
+    {
+        cout << pareador[i] << endl;
+    }
+    
+    return 0;
+}
