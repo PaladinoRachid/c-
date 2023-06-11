@@ -1,0 +1,54 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+float pesi(float h, char s)
+{
+    float pid;
+    if (s == 'M' || s== 'F' || s== 'f' || s == 'm')
+    {
+        if (s == 'M' || s == 'm')
+        { 
+            pid = (72.7*h) - 58;
+        }
+        else 
+        { 
+            pid = (62.1*h) - 44.7;
+        }    
+    }
+    else
+    {
+        pid = 0;
+    }
+    return pid;
+}
+
+int main()
+{
+    char s;
+    float h, p, pid;
+    cin >> s >> h >> p;
+    pid = pesi(h, s);
+    if (pid != 0)
+    {
+        cout << fixed << setprecision(4);
+        cout << "PESO IDEAL: " << pid;
+        if(p > pid)
+        { 
+            cout << "\nA pessoa esta acima do peso ideal.";
+        }
+        if (p < pid)
+        { 
+            cout << "\nA pessoa esta abaixo do peso ideal.";
+        }
+        if (p == pid)
+        {
+            cout << "\nA pessoa esta no peso ideal.";
+        }
+    }
+    else
+    {
+        cout<<"O calculo do peso nao e possivel!";
+    }
+    return 0;
+}
