@@ -1,0 +1,65 @@
+#include <iostream>
+#define M 3
+
+using namespace std;
+
+float multic (int A[M][M],int B[M][M], int lin, int col)
+{
+    float val = 0;
+    int i;
+    for(i = 0; i < M; i++)
+    {
+        val += A[lin][i]*B[i][col];
+    }
+    return val;
+}
+
+void produto(int A[M][M], int B[M][M], int R[M][M])
+{
+    int i, j;
+    for(i = 0; i< M; i++)
+    {
+        for (j = 0; j< M; j++)
+        {
+            R[i][j] = multic(A,B, i, j);
+        }
+    }
+}
+
+int main()
+{
+    int A[M][M], B[M][M], R[M][M];
+    int k, q;
+    
+    for(k = 0; k < M; k++)
+    {
+        for(q = 0; q< M; q++)
+        {
+            cin>> A[k][q];
+        }
+    }
+    
+    
+    for(k = 0; k < M; k++)
+    {
+        for(q = 0; q< M; q++)
+        {
+            cin>> B[k][q];
+        }
+    }
+    
+    produto(A,B,R);
+    
+    for(k = 0; k < M; k++)
+    {
+        for(q = 0; q< M; q++)
+        {
+            cout << R[k][q] << " ";
+        }
+        
+        cout << endl;
+    }
+    
+
+    return 0;
+}
