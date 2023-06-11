@@ -1,0 +1,32 @@
+#include <iostream>
+#include <iomanip>
+#define TAM 100
+
+using namespace std;
+
+void informativo ( char nome [], float b, float a)
+{
+    float s;
+    s = b + a*0.15;
+    
+    cout << fixed << setprecision(2);
+    
+    cout << "O salario de " << nome << " sera de R$ " << s;
+}
+
+int main()
+{
+    char nome [TAM];
+    float a;
+    float b;
+    
+    cin.getline(nome, TAM-1);
+    
+    cin>> b;
+    
+    cin>> a;
+    
+    informativo(nome, b, a);
+    
+    return 0;
+}
