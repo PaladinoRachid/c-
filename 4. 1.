@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b, c;
+    cin >> b;
+    cin >> c;
+    a = 0;
+    
+    while ( a < b)
+    {
+        if (c >= 60)
+        cout << "Aprovado!"<< endl;
+        if (c < 60)
+        cout << "Reprovado!"<< endl;
+        a++;
+        cin >> c;
+    }
+    
+    return 0;
+}
