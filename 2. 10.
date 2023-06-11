@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+
+int min(int h)
+{ 
+    int m;
+    m = h*60;
+    return m;
+}    
+int main()
+{
+    int h, m;
+    cin >> h;
+    m = min(h);
+    cout << h << " horas = " << m << " minutos ";
+     return 0;
+}
