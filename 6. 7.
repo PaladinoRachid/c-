@@ -1,0 +1,42 @@
+#include <iostream>
+#define tam 5
+
+using namespace std;
+
+void tomaki(int vetor[], int q)
+{
+    int i;
+    
+    for (i = 4; i >= 0; i--)
+    {
+        vetor [i] = q%10;
+        q = q/10;
+    }
+    return;
+}
+
+int main()
+{
+    
+    int q, i;
+    int vetor[tam];
+    cin>> q;
+    if (q < 0 || q >99999)
+    {
+        cout << "Entrada fora do limite estipulado";
+    }
+    else
+    {
+        tomaki ( vetor, q);
+        cout << "Vetor obtido: {";
+
+        for ( i = 0; i < tam; i++)
+        {
+            cout << vetor[i];
+            if (i < 4)
+            cout << ",";
+        }
+        cout << "}";
+    }
+    return 0;
+}
