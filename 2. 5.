@@ -1,0 +1,25 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+float desc (float p)
+{   
+    float r;
+    r = p*0.9;
+    return r;
+}
+   
+int main()
+{   
+     cout << fixed << setprecision (2);
+    //Variáveis
+    float a,b;
+    //Operação
+    cin >> a;
+    b = desc(a);
+    //Saída
+    cout << "O valor a vista eh de R$ " << b;
+    
+    return 0;
+}
