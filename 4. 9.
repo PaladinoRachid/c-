@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+void vaivai( int n)
+{
+    int c = 1;
+    while ( c <= n)
+    {
+        cout << c << " ";
+        c++;
+    }
+    return;
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    vaivai (n);
+    return 0;
+}
