@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+void divisores ( int x)
+{
+    if (x < 0)
+    x = -x;
+    
+    int d;
+    for ( d = 1; d <= x; d++)
+    {
+        if (x%d == 0)
+        cout << d << " ";
+    }
+    return;
+}
+int main( )
+{
+    int x;
+    cin >> x;
+    divisores(x);
+    
+    return 0;
+}
