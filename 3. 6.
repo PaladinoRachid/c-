@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+void parimpar (int a)
+{
+    if (a%2 == 0)
+    {
+        cout << "par";
+    }
+    else
+    {
+        cout << "impar";
+    }
+    return;
+}    
+int main()
+{
+    int a;
+    cin >> a;
+    parimpar (a);
+    return 0;
+}
