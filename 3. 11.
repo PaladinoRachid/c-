@@ -1,0 +1,39 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void dunker(float a, float b, int c)
+{
+    if( b == 0 && c == 3)
+    {
+        cout << "Divisão por zero!";
+    }
+    else
+    {
+        cout << fixed << setprecision (2);
+        switch(c)
+        {
+            case 1: cout << "Resultado da soma: " << a+b;
+            break;
+        
+            case 2: cout << "Resultado da multiplicação: " << a*b;
+            break;
+        
+            case 3: cout << "Resultado da divisão: "<< a/b;
+            break;
+        
+           default: cout << "Código inválido!";
+        }
+    }
+    return;
+}
+
+int main()
+{
+    float a, b;
+    int c;
+    cin >> a >> b >> c;
+    dunker(a,b,c);
+
+    return 0;
+}
