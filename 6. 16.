@@ -1,0 +1,119 @@
+#include <iostream>
+#define tamg 10
+#define tamu 20
+using namespace std;
+
+
+int intercede (int A[], int B[], int C[])
+{
+    int i, j =0, k =0;
+    for (i= 0; i < tamg; i++)
+    {
+        for ( j = 0; j < tamg; j++)
+        {
+            if(A[i]== B[j])
+            {
+                C[k]=A[i];
+                k++;
+            }
+        }
+    }
+    
+    return k;
+
+}
+
+int unefunc(int A[], int B[], int C[])  // a = 1,2,3; b = 5,4,1; 
+{
+    int i, j = 0, p = 10, verif = 0;
+    
+    for ( i = 0; i < tamg; i++)
+    {
+        C[i] = A[i]; //c = 1, 2, 3;
+    }
+    
+    for (i = 0; i < tamg; i++)
+    {
+        verif =0;
+        for(j = 0; j< tamg; j++)
+        {
+            if(B[i] == C[j]) 
+            {
+                verif = 1;
+            }
+        }
+        
+        if(verif == 0)
+        {
+           C[p]=B[i];
+           p++;
+        }
+    }
+    
+    for (i = 0; i < tamu; i++)
+    {
+        
+    }
+    
+    
+    return p;
+}
+
+void ordena(int ord[], int tam)
+{
+    int i, j;
+    float a;
+    for (i = 0; i < tam - 1; i++)
+    {
+        for(j= tam-1;j > i; j--)
+        {
+            if(ord[j] < ord[j-1])
+            {
+                a = ord[j];
+                ord[j]= ord[j-1];
+                ord [j - 1] = a;
+            }
+        }
+    }
+}
+
+int main()
+{
+    int v1[tamg], v2[tamg], inter[tamg];
+    int unevetor[tamu];
+    int i, k, p;
+    
+    for (i = 0; i < tamg; i++)
+    {
+        cin>> v1[i];
+    }
+    
+    for (i = 0; i < tamg; i++)
+    {
+        cin>> v2[i];
+    }
+    
+    k = intercede (v1, v2, inter);
+     
+    p = unefunc(v1,v2, unevetor);
+    
+   
+    ordena ( inter, k);
+    ordena( unevetor, p);
+    
+    cout << "A intersecao dos dois conjuntos eh:"<< endl;
+    for (i = 0; i < k; i++)
+    {
+        cout << inter[i] << " ";
+    }
+    cout << endl;
+    
+    cout << "A uniao dos dois conjuntos eh:"<< endl;
+    for (i = 0; i < p  ;i++)
+    {
+        cout<< unevetor[i] << " ";
+    }
+
+
+    return 0;
+}
