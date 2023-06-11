@@ -1,0 +1,57 @@
+#include <iostream>
+#define TAM 51
+
+using namespace std;
+
+int main()
+{
+    char str[TAM ];
+    char consoante[TAM];
+    char vogal [TAM];
+    int i;
+    int k = 0, c = 0;
+    
+    cin.getline(str, TAM - 1);
+    
+    for (i = 0; str[i]!= '\0'; i++)
+    {
+        if (str [i] == 'a' || str [i] == 'o' || str [i] == 'e'|| str [i] == 'u'|| str [i] == 'i'|| str [i] == 'I' || str [i] == 'A' || str [i] == 'U' || str [i] == 'O'|| str [i] == 'E')
+        {
+             vogal [k] = str[i];
+            k++;
+        }
+        else
+        {
+            if ( str[i] != ' ')
+            {
+            consoante [c] = str[i];
+            c++;
+            }
+        }
+    }
+    
+    
+    
+    cout << "Vetor de vogais: ";
+    if (k == 0)
+    {
+        cout << endl;
+    }
+    for (i = 0; i < k; i++) 
+    {
+        cout << vogal[i];
+        if ( i == k -1)
+        cout << endl;
+    }
+
+
+    cout << "Vetor de consoantes: ";
+        for (i = 0; i < c; i++) 
+    {
+        cout << consoante[i];
+        if ( i ==  c - 1)
+        cout << endl;
+    }
+
+    return 0;
+}
