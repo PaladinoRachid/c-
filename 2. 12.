@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+float dist( float x, float y, float x0, float y0)
+{ 
+    float d;
+    d = sqrt(pow(x - x0, 2) + pow (y - y0, 2));
+    return d;
+}    
+
+int main()
+{
+    float x, y, x0, y0, x1, y1, d1, d2, d3, p;
+    cin >> x >> y >> x0 >> y0 >> x1 >> y1;
+    d1 = dist(x, y, x0 , y0);
+    d2 = dist(x, y, x1, y1);
+    d3 = dist(x1, y1, x0, y0);
+    p = d1 + d2 + d3;
+    cout << fixed << setprecision(2);
+    cout << "Perímetro: " << p << ".";
+    return 0;
+}
