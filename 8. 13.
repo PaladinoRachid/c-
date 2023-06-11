@@ -1,0 +1,49 @@
+#include <iostream>
+#include <iomanip>
+#define DIM 100
+
+using namespace std;
+
+float grandesm( int A[DIM][DIM], int L, int C, int J)
+{
+    float s = 0, q = 0, m;
+    int i;
+    for (i = 0; i< L; i++)
+    {
+        if (A[i][J]!= 0)
+        {
+        s = s + A[i][J];
+        q++;
+        }
+    }
+    
+    m = s/q;
+    
+    return m;
+}
+
+int main()
+{
+    int MAT[DIM][DIM];
+    int M, N, i, j, J;
+    float media;
+    
+    cin >> M >> N;
+    
+    for ( i = 0; i < M; i++)
+    {
+        for ( j = 0; j < N; j++)
+        {
+            cin>> MAT[i][j];
+        }
+    }
+    
+    cin >> J;
+    
+    media = grandesm(MAT, M, N, J);
+    
+    cout << fixed << setprecision(2);
+    cout << media;
+    
+    return 0;
+}
