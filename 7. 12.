@@ -1,0 +1,32 @@
+#include <iostream>
+#define TAM 500
+
+using namespace std;
+
+int conta(char str[], char car)
+{
+    int i, c = 0;
+    
+    for ( i = 0; str[i]!= '\0'; i++)
+    {
+        if ( str[i]== car)
+        c++;
+    }
+    
+    return c;
+}
+
+int main()
+{
+    int k;
+    char cadeia[TAM];
+    char carac;
+    
+    cin.getline(cadeia, 250);
+    cin >> carac;
+    
+    k = conta(cadeia, carac);
+    
+    cout << k;
+    
+}
