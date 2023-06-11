@@ -1,0 +1,23 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{  
+    cout << fixed << setprecision (2);
+    //Variáveis
+    float c, f;
+    
+    //Entrada 
+     cin >> c;
+    cout << "Celsius: " << c << endl;
+    
+    
+    //Operação
+    f = c*1.8 + 32;
+    
+    //Saída
+    cout << "Fahrenheit: "<< f;
+    
+    return 0;
+}
