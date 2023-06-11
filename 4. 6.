@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+void descartes(float x, float y)
+{
+    if ( x > 0 && y > 0 )
+    cout << "Primeiro" << endl;
+    if ( x < 0 && y > 0)
+    cout << "Segundo" << endl;
+    if ( x < 0 && y < 0)
+    cout << "Terceiro"<< endl;
+    if ( x > 0 && y < 0)
+    cout << "Quarto" << endl;
+    return;
+}    
+        
+int main()
+{
+    float x, y;
+    cin >> x >> y;
+    while ( x != 0 && y != 0)
+    {
+        descartes (x, y);
+        cin >> x >> y;
+    }
+    return 0;
+}
