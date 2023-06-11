@@ -1,0 +1,65 @@
+#include <iostream>
+#include <iomanip>
+#define MAX 100
+
+using namespace std;
+
+void tresvet(int v1[], int v2[], int v3[], int tam)
+{
+    cout << fixed << setprecision(4);
+    int i, j=0, k=0;
+    float s = 0, s0 = 0;
+    for (i= 0; i< tam; i ++)
+    {
+
+        if(v1[i]%2 == 0)
+        {
+            v2[j]=v1[i];
+            s = s + v2[j];
+            j++;
+            
+        }
+        else
+        {
+            v3[k]=v1[i];
+            s0 = s0 + v3[k];
+            k++;
+            
+        }
+    }
+    
+    cout << "v2"<< endl;
+    
+    for(i = 0; i < j; i++)
+    {
+        cout << v2[i] << endl;
+    }
+    
+    
+    cout << "media = "<< (float) s/j << endl << endl;
+    
+    cout << "v3"<< endl;
+    
+    for(i = 0; i < k; i++)
+    {
+        cout << v3[i] << endl;
+    }
+    cout << "media = "<< (float)s0/k;
+}
+
+int main()
+{   int tam;
+    cin >> tam;
+    int v1[tam], v2[tam], v3[tam];
+    
+    int i;
+    
+    for (i = 0; i < tam; i++)
+    {
+        cin>> v1[i];
+    }
+    
+    tresvet(v1, v2, v3, tam);
+    
+    return 0;
+}
