@@ -1,0 +1,50 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#define pi 3.141592
+
+using namespace std;
+
+float d(float r)
+{   
+    float d;
+    d = 2*r;
+    return d;
+}    
+
+float c(float r)
+{   
+    float c;
+    c = 2*pi*r;
+    return c;
+}    
+
+float a(float r)
+{   
+    float a;
+    a = pi*r*r;
+    return a;
+}    
+
+void dca(float r)
+{   
+    cout << fixed << setprecision(2);
+    cout << "Raio: " << r << endl;
+    cout << "Diâmetro: " << d(r) << endl;
+    cout << "Circunferência: " << c(r)<< endl;
+    cout << "Área: " << a(r) << endl;
+
+    return;
+    
+}    
+
+int main()
+{
+    float r1, r2;
+    cin >> r1 >> r2;
+    dca(r1);
+    cout << endl;
+    dca(r2);
+
+    return 0;
+}
