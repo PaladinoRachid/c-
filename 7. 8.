@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cstring>
+#define TAM 500
+
+using namespace std;
+
+void maioral(char maior [])
+{
+    int n, j, i;
+    
+    n = strlen(maior);
+    
+    for ( i = 0; i < n; i++)
+    {
+        if (maior[i] <= 'Z' && maior[i] >= 'A')
+        {
+            for ( j = n; j >= i; j--)
+            {
+                maior[j+1] = maior[j];
+            }
+            maior[i]= ' ';
+            i++;
+            n++;
+        }
+        
+        
+    }
+}
+
+int main()
+{
+    char maior[TAM];
+    
+    cin.getline (maior, TAM);
+    
+    maioral (maior);
+    
+    cout << maior;
+    
+    return 0;
+}
