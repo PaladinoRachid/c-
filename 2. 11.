@@ -1,0 +1,46 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+//Volume
+float vol(float l, float a, float c)
+{
+    float v;
+    v = a*l*c;
+    return v;
+}    
+//Espessura
+float esp(float v)
+{ 
+    float e, v0;
+    v0 = ceil(v-1);
+    e = v0*0.3 + 0.8;
+    return e;
+} 
+//Preço
+float pre(float b,float a, float c, float e)
+{   
+    float p;
+    p = e*45*(2*b*a + 2*c*a + c*b);
+    return p;
+}    
+//GeralVEP
+float ger( float l, float a, float c)
+{
+    float v, e, pt;
+    v = vol(l, a, c);
+    e = esp(v);
+    pt = pre(l, a, c, e);
+    
+    return pt;
+}
+//Principal com saída
+int main()
+{
+    float l, a, c;
+    cin >> l >> a >> c;
+    cout << fixed << setprecision(2);
+    cout << "Valor da caixa d'agua: R$ " << ger(l,a,c);
+    return 0;
+}
