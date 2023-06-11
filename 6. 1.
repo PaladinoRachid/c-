@@ -1,0 +1,27 @@
+#include <iostream>
+#include <iomanip> 
+#include <cmath>
+
+using namespace std;
+
+#define tam 10
+
+int main()
+{
+    int vet [tam];
+    int i;
+    
+    for ( i = 0; i < tam; i++)
+    {
+        cin >> vet[i];
+    }
+    for (i = 0; i < tam; i++)
+    {
+        if (vet[i]%2 != 0)
+        {
+            cout << vet[i] << endl;
+        }
+    }
+    return 0;
+    
+}
