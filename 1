@@ -1,0 +1,46 @@
+#include <iostream>
+#define TAM 15
+
+using namespace std;
+
+void preenche (int origem[], int destino[], int val)
+{
+    int i;
+    destino [0] = 500;
+    
+    for (i= 1 ; i < TAM; i++)
+    {
+        if(i%2==1)
+        {
+            destino[i]= origem[i]/val;
+        }
+        else
+        {
+            destino[i]= origem[i-1]*val;
+        }
+    }
+}
+
+
+int main()
+{
+    int destino[TAM];
+    int origem [TAM];
+    int val;
+    int i;
+    
+    for (i = 0; i < TAM; i++)
+    {
+        cin>> origem[i];
+    }
+    
+    cin >> val;
+    
+    preenche(origem, destino, val);
+    
+    for (i = 0; i < TAM; i++)
+    {
+        cout << destino[i] << " ";
+    }
+    return  0;
+}
