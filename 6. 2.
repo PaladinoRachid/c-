@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+#define toma 7
+
+
+int main()
+{
+    int zin[toma];
+    int i;
+    
+    for ( i = 0; i < toma; i++)
+    {
+        cin >> zin[i];
+    }
+    for ( i = 0; i < toma; i++)
+    {
+        if ( zin[i]%3 == 0)
+        {
+            zin [i] = 0;
+        }
+        cout << zin [i] << endl;
+    }
+    return 0;
+}
