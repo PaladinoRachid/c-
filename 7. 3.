@@ -1,0 +1,42 @@
+#include <iostream>
+#define TAM 500
+
+using namespace std;
+
+void guerra(char string[], char car)
+{
+    int i;
+    int j;
+    for ( i = 0; string[i]!= '\0'; i++)
+    {
+        if( string[i] == car)
+        {
+            for ( j = i; string[j]!='\0'; j++)
+            {
+                string [j] = string[j+1];
+            }
+            i--;
+        }
+    }
+    return;
+}
+
+int main()
+{
+    int i;
+    char string[TAM];
+    char car;
+    
+    cin.getline(string, TAM-1);
+    
+    cin >> car;
+    
+    guerra(string, car);
+    
+    for ( i= 0; string[i] != '\0'; i++)
+    {
+        cout << string[i];
+    }
+
+    return 0;
+}
