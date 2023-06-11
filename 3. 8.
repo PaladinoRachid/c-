@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int altera (int a)
+{
+    int b;
+    if (a%2 == 0)
+    {
+        b = a +1;
+    }
+    else
+    {
+        b = a -2;
+    }
+    return b;
+}
+int main()
+{
+    int a;
+    cin >> a;
+    cout << altera(a);
+    return 0;
+}
