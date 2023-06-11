@@ -1,0 +1,37 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void depende()
+{
+    int a, b, k, i;
+    float v;
+    cin >> b;
+    a = 0;
+    k = 0;
+   
+    while(a < b)
+    {
+        cin>> i;
+        if (i < 18)
+        {
+           k = k +1;
+        }
+        a++;
+    }
+    v = 60*k;
+    cout << fixed << setprecision(2);
+    cout << "Valor total do auxilio: R$ "<< v << endl;
+    return;
+}
+
+int main ()
+{
+    int a= 0;
+    while (a < 5)
+    {
+        depende ();
+        a++;
+    }
+    return 0;
+}
