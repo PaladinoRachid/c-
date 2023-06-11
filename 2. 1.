@@ -1,0 +1,23 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+float divide (float n, float d)
+{  
+   float r;
+   r = n/d;
+   return r;
+}   
+  
+int main()
+{  
+    cout << fixed << setprecision(2);
+    float n, d;
+    cin >> n >> d;
+    cout << "COMPRA A PRAZO" << endl;
+    cout << "Valor da parcela a prazo: "<< "R$ ";
+    cout << divide(n,d);
+    return 0;
+}
