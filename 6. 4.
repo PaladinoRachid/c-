@@ -1,0 +1,30 @@
+#include <iostream>
+#define tam 20
+
+using namespace std;
+
+int negavet(float vet[], int t )
+{
+    int i, c = 0;
+    for ( i = 0; i < t; i++)
+    {
+        if (vet[i] < 0)
+        {
+            c++;
+        }
+    }
+    return c;
+}
+int main()
+{
+    int q, i;
+    float vet [tam];
+    cin>> q;
+    for ( i = 0; i < q; i++)
+    {
+        cin >> vet [i];
+    }
+    
+    cout<<negavet(vet, q);
+    return 0;
+}
