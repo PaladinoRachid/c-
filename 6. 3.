@@ -1,0 +1,30 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+#define quan 12
+
+int main()
+{
+    float mv[12];
+    int i;
+    float s = 0, c = 0;
+    
+    
+    for ( i = 0; i < quan; i++ )
+    {
+        cin >> mv[i];
+    }
+    for (i = 0; i < quan; i++)
+    {
+        if (mv[i] < 3 && mv[i] > -3)
+        {
+            s = s + mv[i];
+            c++;
+        }
+    }
+    cout << fixed << setprecision(1);
+    cout << "Media dos elementos no intervalo: "<< s/c;
+    return 0;
+}
