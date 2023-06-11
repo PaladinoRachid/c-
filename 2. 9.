@@ -1,0 +1,19 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+float soma(float a, float b)
+{   
+    float s;
+    s = a + b;
+    return s;
+}    
+
+int main()
+{
+    float a, b;
+    cin >> a >> b;
+    cout << fixed << setprecision(2);
+    cout << a <<" + " << b << " = " << soma(a,b);
+    return 0;
+}
