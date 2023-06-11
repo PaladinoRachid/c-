@@ -1,0 +1,36 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void operacao( float a, float b, char c)
+{
+    cout << fixed << setprecision (4);
+    if (b != 0 || (c=='+'|| c == '-' || c == '*'))
+    {
+        switch(c)
+        {
+         case '+': cout << a+b;
+         break;
+         case '-': cout << a-b;
+         break;
+         case '*': cout << a*b;
+         break;
+         case '/': cout << a/b;
+         break;
+         default: cout << "Operação inválida";    
+        }
+    }
+    else
+    {
+        cout << "ERRO: Divisao por Zero";
+    }
+    return;
+}    
+int main()
+{
+    float a, b;
+    char c;
+    cin >> c >> a >> b;
+    operacao(a,b,c);
+    return 0;
+}
