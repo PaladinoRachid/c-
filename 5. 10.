@@ -1,0 +1,41 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    int x;
+    int s = 0, sp = 0, p = 0, imp = 0, q = 0;
+    do 
+    {
+        cin>> x;
+        if (x != 0)
+        {
+            s = s + x;
+            if (x%2 == 0)
+            {
+                sp = sp + x;
+                p++;
+            }
+            else
+            {
+                imp++;
+            }
+            
+            q++;
+        }
+        
+    } while (x != 0);
+    
+    
+    cout << "Quantidade de numeros pares: "<< p << endl;
+    cout << "Quantidade de numeros impares: "<< imp << endl;
+    cout << fixed << setprecision (3);
+    if ( p ==0)
+    p =1;
+    cout << "Media dos valores pares: "<< (float)sp/p << endl;
+    cout << "Media dos valores lidos: "<< (float)s/q << endl;
+    
+    return 0;
+}
