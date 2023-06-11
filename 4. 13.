@@ -1,0 +1,33 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void banco (int c)
+{
+    float s, sf;
+    cin >> s;
+    int a = 0;
+    while (a < c)
+    {
+    sf = s -12.47;
+    cout << fixed << setprecision (2);
+    cout << sf;
+    if (sf < 0)
+    {
+        cout << " SALDO NEGATIVO, CLIENTE DEVE SER COMUNICADO.";
+    }
+    cout << endl;
+    a++;
+    cin >> s;
+    }
+    return;
+    
+}
+int main()
+{
+    int c;
+    cin >> c;
+    banco (c);
+
+    return 0;
+}
