@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+void nove(float a, float b)
+{
+    float x, s = 0;
+    int c = 0;
+    if (a < b)
+    {
+    do
+    {
+        cin >> x;
+        if ( x >= a && x <= b)
+        {
+            s = s + x;
+            c++;
+        }
+        
+    } while (x >= 0);
+    }
+    else 
+    {
+    do
+    {
+        cin >> x;
+        if ( x >= b && x <= a)
+        {
+            s = s + x;
+            c++;
+        }
+        
+    } while (x >= 0);    
+    }
+    
+    cout << "Media: "<< s/c;
+}
+int main()
+{
+    float a, b;
+    cin>> a >> b;
+    nove ( a, b);
+
+    return 0;
+}
