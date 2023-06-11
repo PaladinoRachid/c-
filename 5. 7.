@@ -1,0 +1,39 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+void tres(int n) 
+{
+    double t = 2;
+    double k, c;
+    
+    while  (n > 1) 
+    {
+        k = n; 
+        c = n; 
+        
+        while ( c > 1) 
+        {
+            c--; 
+            k = k*c; 
+        }
+        
+        t = t + 1/k;
+        n--; 
+    }
+        
+    cout << fixed << setprecision(6);
+    cout << "E = " << t; 
+    
+    return;
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    tres(n);
+    
+    return 0;
+}
