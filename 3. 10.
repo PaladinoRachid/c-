@@ -1,0 +1,27 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void divide ( int a, int b)
+{
+    int c;
+    float d;
+    if (b == 0)
+    {
+        cout << "Não é possível realizar a divisão.";
+    }
+    else 
+    {
+        c = a/b;
+        d = a/(float)b;
+        cout << "Divisão Inteira: " << c;
+        cout << "\nDivisão Real: " << fixed << setprecision(2) << d;
+    }
+}
+int main()
+{
+    int a, b;
+    cin >> a >> b;
+    divide(a,b);
+    return 0;
+}
