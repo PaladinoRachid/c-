@@ -1,0 +1,54 @@
+#include <iostream>
+#include <iomanip>
+#define M 3
+
+using namespace std;
+
+void lematriz(float mat[M][M])
+{
+    int i, j;
+    for (i = 0; i < M; i++)
+    {
+        for ( j = 0; j < M; j++)
+        {
+            cin >> mat[i][j];
+        }
+    }
+    return;
+}
+
+void transpoh( float mat1[M][M], float mat2[M][M])
+{
+    int i, j;
+    for ( i = 0; i< M; i++)
+    {
+        for (j = 0; j < M; j++)
+        {
+            mat2[j][i]=mat1[i][j];
+        }
+    }
+    return;
+}
+
+int main()
+{
+    float A[M][M], B[M][M];
+    int i, j;
+    
+    lematriz(A);
+    
+    transpoh(A,B);
+    
+    cout<< fixed << setprecision(1);
+    
+    for ( i = 0; i< M; i++)
+    {
+        for (j = 0; j < M; j++)
+        {
+            cout << B[i][j] << " ";
+        }
+        cout << endl;
+    }
+    
+    
+}
