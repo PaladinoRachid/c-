@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{  //Texto
+    cout << "Alguns IDEs para se programar em C: ";
+    cout << "\nCode Blocks";
+    cout << "\nIDEOne";
+    cout << "\nOnlineGBD";
+    cout << "\nRepl.it";
+    return 0;
+}
