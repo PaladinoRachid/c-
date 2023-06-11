@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+void reta (float r)
+{
+    if ( r == 0)
+    {
+        cout << "Neutro";
+    }
+    if ( r > 0)
+    {
+        cout << "Positivo";
+    }
+    if ( r < 0)
+    {
+        cout << "Negativo";
+    }    
+    return;
+}
+int main()
+{
+    float a;
+    cin >> a;
+    reta(a);
+    return 0;
+}
