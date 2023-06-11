@@ -1,0 +1,65 @@
+#include <iostream>
+#define size 10
+#define s_c 3
+
+using namespace std;
+
+void jogodeazar(int j1[], int j2[], int R[])
+{
+    int c1 = 0, c2 = 0, comp = 0;
+    int i, s;
+    
+    for (i = 0; i < size; i++)
+    {
+        s=j1[i]+j2[i];
+        
+        if(s%3 == 0)
+        {
+            c1++;
+        }
+        else
+        {
+            if (s%3 == 1)
+            {
+                c2++;
+            }
+            else
+            {
+                comp++;
+            }
+        }
+    }
+    
+    R[0] = c1;
+    R[1]= c2;
+    R[2]= comp;
+    return;
+}
+
+int main()
+{
+    int j1[size];
+    int j2[size];
+    int R[s_c];
+    int i;
+    
+    for (i = 0; i< size; i++)
+    {
+        cin >> j1[i];
+    }
+    
+    for (i = 0; i < size; i++)
+    {
+        cin >> j2[i];
+    }
+    
+    jogodeazar( j1, j2, R);
+    
+    for (i = 0; i < s_c; i++)
+    {
+        cout << R[i] << "   ";
+    }
+    
+    return 0;
+    
+}
