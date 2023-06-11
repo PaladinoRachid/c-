@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int portres()
+{
+    int a;
+    cin >> a;
+    while ( a%3 == 0)
+    {
+        cin>> a;
+    }
+    return a;
+}
+int main()
+{
+    int a;
+    a = portres();
+    if ( a < 0 || a > 60)
+    {
+        cout << a;
+    }
+    else
+    {
+        cout << "valor invalido";
+    }
+
+    return 0;
+}
