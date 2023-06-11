@@ -1,0 +1,42 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+   float v, v1, vf, va, vb, vc, vp;
+   cin >> v;
+   if (v <= 2)
+   {
+       v1 = v + 0.15;
+       vp = 0.15;
+       vf = v1;
+   }
+   if ( 2 < v && v <= 5)
+   {
+       va = v-2;
+       v1 = 2 + va*1.02 + 0.15;
+       vp = v1 - v;
+       vf = v1;
+   }
+   if (5 < v && v <= 20)
+   {
+       va = 3;
+       vb = v - 5;
+       v1 =  2 + va*1.02 + vb*1.10 + 0.15;
+       vp = v1 - v;
+       vf = v1;
+   }
+   if ( v > 20)
+   {
+       va = 3;
+       vb = 15;
+       vc = v - 20;
+       v1 = 2 + va*1.02 + vb*1.10 + vc*1.08 + 0.15;
+       vp = v1 - v;
+       vf = v1;
+   }
+   cout << fixed << setprecision(2)<< "Preco final: R$ " << vf << " (acrescimo de R$ " << vp << ")";
+   return 0;
+
+}
