@@ -1,0 +1,94 @@
+#include <iostream>
+
+using namespace std;
+
+void inverte(int v1[], int tam) 
+{
+    int i;
+    int j = 0;
+    int poe, poe2;
+    
+    int verifica = tam-1; 
+    
+    for ( i = verifica ; i >= tam/2; i--) 
+    {
+        poe = v1[j] ; // poe = 1
+        poe2 = v1[i]; // poe = 9
+        v1[i]= poe; // v1[8]=1
+        v1[j] = poe2; // v1[0]= 9
+        j++;
+    }
+
+    return;
+}
+
+int main()
+{
+    int i;
+    int v1[5], v2[9], v3[14];
+    int tam1, tam2, tam3;
+    
+    cin>> tam1;
+    
+    //primeiro
+    
+    for( i = 0; i < tam1; i++ )
+    {
+        cin >> v1[i];
+    }
+    
+    //segundo
+    
+    cin>> tam2;
+    
+    for( i = 0; i < tam2; i++ )
+    {
+        cin >> v2[i];
+    }
+    
+    //terceiro
+    
+    cin>> tam3;
+    
+    for( i = 0; i < tam3; i++ )
+    {
+        cin >> v3[i];
+    }
+    
+    //impressao
+    
+    inverte(v1, 5);
+        
+    cout << "Inversao do primeiro vetor" << endl;
+    
+    for (i = 0; i < 5; i++)
+    {
+        cout << "v["<<i<<"] = "<< v1[i] << endl;
+    }
+    cout << endl;
+    
+    inverte(v2, 9);
+    
+    cout << "Inversao do segundo vetor" << endl;
+
+    
+    for (i = 0; i < 9; i++)
+    {
+        cout << "v["<<i<<"] = "<< v2[i] << endl;
+    } 
+    cout << endl;
+    
+    inverte(v3, 14);
+    
+    cout << "Inversao do terceiro vetor" << endl;
+    
+    for (i = 0; i < 14; i++)
+    {
+        cout << "v["<<i<<"] = "<< v3[i] << endl;
+    }
+    cout << endl;
+    
+    
+
+    return 0;
+}
