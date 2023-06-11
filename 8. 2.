@@ -1,0 +1,42 @@
+#include <iostream>
+#define TAM 3
+
+using namespace std;
+
+int funciona(int mat[TAM][TAM])
+{
+    int i, j, s = 0;
+    for(i = 0; i < TAM; i++)
+    {
+        for(j = 0; j<TAM; j++)
+        {
+            if( i > j)
+            s= s + mat[i][j];
+        }
+    }
+    return s;
+}
+
+int main()
+{
+    int mat[TAM][TAM];
+    int i, j;
+    int s;
+    
+    for(i = 0; i< TAM; i++)
+    {
+        for(j = 0; j<TAM; j++)
+        {
+            cin>> mat[i][j];
+        }
+    }
+    
+    s = funciona(mat);
+    
+    cout << s;
+    
+    return 0;
+    
+}
+    
+    
