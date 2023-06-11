@@ -1,0 +1,60 @@
+#include <iostream>
+#define M 3
+#define N 4
+
+using namespace std;
+
+void imprime (int MAX[M][N])
+{
+    int i, j;
+    
+    for(i = 0; i < M; i++)
+    {
+        for ( j= 0; j < N; j++)
+        {
+            cout << MAX[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return;
+}
+
+void dot_product (int A[M][N], int k)
+{
+    int i, j;
+    
+    for(i = 0; i < M; i++)
+    {
+        for ( j= 0; j < N; j++)
+        {
+            A[i][j] = k*A[i][j];
+        }
+    }
+    return;
+}
+
+int main()
+{
+    int mat[M][N];
+    int k, i, j;
+    
+    for (i = 0; i < M; i++)
+    {
+        for ( j = 0; j < N; j++)
+        {
+            cin >> mat[i][j];
+        }
+    }
+    
+    cin>> k;
+    
+    dot_product (mat, k);
+    
+    cout << "Escalar: "<< k << endl;
+    
+    cout << "Matriz Final: "<< endl;
+    
+    imprime(mat);
+    
+    return 0;
+}
