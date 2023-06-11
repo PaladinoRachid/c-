@@ -1,0 +1,36 @@
+#include <iostream>
+#define T 5
+
+using namespace std;
+
+void fuckoff(int A[T][T])
+{
+    int i, j;
+    for(i = 0; i < T; i++)
+    {
+        for(j= 0; j< T; j++)
+        {
+            A[i][j] = 0;
+            if (i == j)
+            cin >> A[i][j];
+        }
+    }
+}
+
+int main()
+{
+    int i, j;
+    int A[T][T];
+    fuckoff(A);
+    
+    for(i = 0; i < T; i++)
+    {
+        for(j= 0; j< T; j++)
+        {
+            cout << A[i][j]<< " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
